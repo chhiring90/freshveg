@@ -1,13 +1,10 @@
 import PropTypes from "prop-types";
 
-export default function Column({ children, size }) {
-  const classes = ["px-4"];
-
-  size && classes.push(size);
-  return <div className={classes.join(" ")}>{children}</div>;
+export default function Column({ children, classes }) {
+  return <div className={`${classes ? classes : ""} px-4`}>{children}</div>;
 }
 
 PropTypes.Column = {
   children: PropTypes.node.isRequired,
-  size: PropTypes.string.isRequired,
+  classes: PropTypes.string.isRequired,
 };
