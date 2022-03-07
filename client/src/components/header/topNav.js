@@ -29,13 +29,12 @@ const navPaths = [
 ];
 
 export default function TopNav() {
-  const classes = "text-gray-500 hover:text-green-500";
   return (
-    <nav className="flex text-sm space-between">
+    <nav className="flex py-4 text-sm">
       <ul className="w-2/4 flex">
         {navPaths.slice(0, 3).map(({ value, path }, idx) => (
           <li key={idx} className="px-2">
-            <NavLink className={classes} to={path}>
+            <NavLink className="transitoin hover:text-green-500" to={path}>
               {value}
             </NavLink>
           </li>
@@ -44,7 +43,7 @@ export default function TopNav() {
       <ul className="w-2/4 flex justify-end">
         {navPaths.slice(3).map(({ value, path }, idx) => (
           <li key={idx} className="px-2">
-            <NavLink className={classes} to={path}>
+            <NavLink className="transition hover:text-green-500" to={path}>
               {value}
             </NavLink>
           </li>
