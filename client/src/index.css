@@ -18,12 +18,12 @@
   [multiple],
   textarea,
   select {
-    @apply w-full transition ease-in bg-lime-50 bg-opacity-10 border-gray-400 rounded-lg shadow-sm focus:border-emerald-600 focus:ring-emerald-600;
+    @apply w-full border-2 transition ease-in bg-lime-50 bg-opacity-10 border-slate-400 rounded-lg shadow-sm focus:border-emerald-600 focus:ring-emerald-600;
   }
 
   [type="checkbox"],
   [type="radio"] {
-    @apply border-gray-400 rounded bg-lime-50 bg-opacity-10 text-emerald-600 focus:ring-emerald-600;
+    @apply border-slate-400 border-2 rounded bg-lime-50 bg-opacity-10 text-emerald-600 focus:ring-emerald-600;
   }
 
   h1,
@@ -32,7 +32,7 @@
   h4,
   h5,
   h6 {
-    @apply font-semibold;
+    @apply font-serif font-bold tracking-wider;
   }
 
   h1 {

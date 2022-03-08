@@ -34,7 +34,7 @@ export default function TopNav() {
       <ul className="w-2/4 flex">
         {navPaths.slice(0, 3).map(({ value, path }, idx) => (
           <li key={idx} className="px-2">
-            <NavLink className="transitoin hover:text-green-500" to={path}>
+            <NavLink className="transition hover:text-green-500" to={path}>
               {value}
             </NavLink>
           </li>

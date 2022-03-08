@@ -6,7 +6,6 @@ import Sidebar from "../components/sidebar/index";
 import Card from "../components/card/index";
 import Button from "../components/button/index";
 import Testimonial from "../components/testimonial/index";
-import Footer from "../components/footer/index";
 
 import { srcToAlt } from "../helper/index";
 
@@ -168,24 +167,22 @@ export default function Home() {
                     </article>
                   </Column>
                   <Column classes="w-6/12">
-                    {[...new Array(3)].map((_, idx) => (
-                      <article key={idx} className="flex flex-wrap mb-8">
-                        <div className="w-8/12 flex flex-wrap">
-                          <h4 className="text-base">
-                            Marshmallow toffee jelly beans dessert fruitcake .
-                          </h4>
-                          <h5>Author</h5>
-                          <span className="mx-4 font-semibold">3.8.2022</span>
-                        </div>
-                        <figure className="w-28 h-28 overflow-hidden rounded-lg">
-                          <img
-                            className="object-center object-cover"
-                            src={Veggie}
-                            alt={srcToAlt(Veggie)}
-                          />
-                        </figure>
-                      </article>
-                    ))}
+                    <article className="flex flex-wrap">
+                      <div className="w-8/12">
+                        <h4 className="text-base">
+                          Marshmallow toffee jelly beans dessert fruitcake .
+                        </h4>
+                        <h5>Author</h5>
+                        <span className="mx-4">3.8.2022</span>
+                      </div>
+                      <figure className="w-24 h-24 overflow-hidden rounded-lg">
+                        <img
+                          className="object-center object-cover"
+                          src={Veggie}
+                          alt={srcToAlt(Veggie)}
+                        />
+                      </figure>
+                    </article>
                   </Column>
                 </Row>
               </Column>
@@ -193,7 +190,6 @@ export default function Home() {
           </Container>
         </section>
       </main>
-      <Footer />
     </>
   );
 }
