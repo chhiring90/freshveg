@@ -18,12 +18,12 @@
   [multiple],
   textarea,
   select {
-    @apply w-full border-2 transition ease-in bg-lime-50 bg-opacity-10 border-slate-400 rounded-lg shadow-sm focus:border-emerald-600 focus:ring-emerald-600;
+    @apply transition w-full border-2 transition ease-in bg-lime-50 bg-opacity-10 border-slate-400 rounded-lg shadow-sm focus:border-emerald-600 focus:ring-emerald-600;
   }
 
   [type="checkbox"],
   [type="radio"] {
-    @apply border-slate-400 border-2 rounded bg-lime-50 bg-opacity-10 text-emerald-600 focus:ring-emerald-600;
+    @apply transition border-slate-400 border-2 rounded bg-lime-50 bg-opacity-10 text-emerald-600 focus:ring-emerald-600;
   }
 
   h1,

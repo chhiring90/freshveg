@@ -9,5 +9,6 @@ export default function Row({ children, classes }) {
 }
 
 Row.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
+  classes: PropTypes.string,
 };

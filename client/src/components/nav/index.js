@@ -15,7 +15,7 @@ const categories = [
 export default function Nav() {
   return (
     <nav>
-      <NavList categories={categories} />
+      <NavList classes="flex flex-wrap" menu={categories} isInline={true} />
     </nav>
   );
 }

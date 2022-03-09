@@ -31,7 +31,7 @@ const accounts = [
 
 export default function Footer() {
   return (
-    <footer className="py-10">
+    <footer className="py-10 mt-auto">
       <Container>
         <Row>
           <Column classes="w-3/12">

@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 
-export default function NavItem({ label, classes }) {
+export default function NavItem({ label, classes, path }) {
   return (
-    <li className={classes && classes}>
+    <li className={classes}>
       <NavLink
         className="font-semibold transition hover:text-green-500"
-        to={`${label}`.split(" ").join("-").toLowerCase()}
+        to={path}
       >
         {label}
       </NavLink>

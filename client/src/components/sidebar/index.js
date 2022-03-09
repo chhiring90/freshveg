@@ -1,16 +1,12 @@
 import PropTypes from "prop-types";
-import NavItem from "../nav/navItem";
+import NavList from "../nav/navList";
 import Button from "../button/index";
 
 export default function Sidebar({ title, menu, btnChildren }) {
   return (
     <aside>
       <h2 className="mb-3 capitalize">{title}</h2>
-      <ul className="mb-6">
-        {menu.map(({ label }, idx) => (
-          <NavItem classes="mb-2" label={label} key={idx} />
-        ))}
-      </ul>
+      <NavList menu={menu} classes="mb-3" />
       <Button type="secondary">{btnChildren}</Button>
     </aside>
   );
