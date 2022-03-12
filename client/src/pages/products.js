@@ -1,5 +1,5 @@
 import React from "react";
-import { ViewGridIcon, ViewListIcon } from "@heroicons/react/outline";
+import { ViewGridIcon, ViewListIcon, StarIcon } from "@heroicons/react/outline";
 
 import { Container, Row, Column } from "../components/layout/index";
 import Chip from "../components/chip/index";
@@ -28,8 +28,8 @@ export default function Product() {
                 </button>
                 <Chip classes="text-sm mx-2">117</Chip> Products
               </Column>
-              <Column>
-                <div className="flex">
+              <Column classes="w-full">
+                <div className="flex py-2 font-semibold tracking-wide">
                   <div className="flex items-center px-2">
                     <input type="radio" id="filter-one" name="filter" />
                     <label className="ml-2" htmlFor="filter-one">
@@ -56,8 +56,83 @@ export default function Product() {
                   </div>
                 </div>
               </Column>
+              <Column classes="flex w-full py-4 items-center">
+                <h6>Applied Filters:</h6>
+                <ul className="flex ml-4">
+                  {[...new Array(4)].map((_, idx) => (
+                    <li key={idx} className="pr-2">
+                      <Chip
+                        clicked={() => console.log("clicked")}
+                        classes="text-sm"
+                        size="sm"
+                      >
+                        Selected Filter
+                      </Chip>
+                    </li>
+                  ))}
+                </ul>
+              </Column>
             </Row>
-            <Row></Row>
+            <Row>
+              <Column classes="w-3/12">
+                <aside>
+                  <div className="mb-4">
+                    <h4 className="mb-3">Categories</h4>
+                    <ul className="font-semibold">
+                      {[...new Array(4)].map((_, idx) => (
+                        <li key={idx} className="mb-2 flex items-center">
+                          Category name
+                          <Chip classes="ml-auto font-normal text-sm" size="sm">
+                            {Math.floor(Math.random() * 300 + 1)}
+                          </Chip>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="mb-3">Brands</h4>
+                    <ul className="font-semibold">
+                      {[...new Array(4)].map((_, idx) => (
+                        <li key={idx} className="mb-2 flex items-center">
+                          <input
+                            type="checkbox"
+                            name={`filter-one`}
+                            id={`filter-${idx}`}
+                          />
+                          <label htmlFor={`filter-${idx}`} className="ml-3">
+                            Filter By Brand Item
+                          </label>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="mb-3">Ratings</h4>
+                    <ul className="font-semibold">
+                      {[...new Array(5)].map((_, idx) => (
+                        <li key={idx} className="mb-2 flex items-center">
+                          <input type="checkbox" id={`filter-f-${idx}`} />
+                          <label htmlFor={`filter-f-${idx}`} className="ml-3">
+                            {[...new Array(5)].map((_, idx) => (
+                              <StarIcon
+                                className={
+                                  "w-4 h-4 text-slate-400 inline m-0.5"
+                                }
+                              />
+                            ))}
+                          </label>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="mb-3">Price</h4>
+                    <input mix="100" min="10" type="range" />
+                  </div>
+                </aside>
+              </Column>
+              <Column classes="w-9/12"></Column>
+            </Row>
           </Container>
         </section>
       </main>
