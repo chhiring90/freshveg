@@ -1,5 +1,3 @@
-import Chip from "../chip/index.js";
-
 export default function Pagination() {
   return (
     <div className="flex items-center w-full">
@@ -14,9 +12,6 @@ export default function Pagination() {
           </li>
         ))}
       </ul>
-      <span>
-        Product <Chip size="sm">500</Chip>
-      </span>
     </div>
   );
 }

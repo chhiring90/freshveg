@@ -1,13 +1,13 @@
 import React from "react";
 import { ViewGridIcon, ViewListIcon, StarIcon } from "@heroicons/react/outline";
 
-import { Container, Row, Column } from "../components/layout/index";
-import Chip from "../components/chip/index";
-import Header from "../components/header/index";
-import Footer from "../components/footer/index";
-import Button from "../components/button/index";
-import Card from "../components/card";
-import Pagination from "../components/pagination/index";
+import { Container, Row, Column } from "../../components/layout/index";
+import Chip from "../../components/chip/index";
+import Header from "../../components/header/index";
+import Footer from "../../components/footer/index";
+import Button from "../../components/button/index";
+import Card from "../../components/card";
+import Pagination from "../../components/pagination/index";
 
 export default function Product() {
   return (
@@ -59,7 +59,7 @@ export default function Product() {
                   </div>
                 </div>
               </Column>
-              <Column classes="flex w-full py-4 items-center">
+              <Column classes="w-full flex mb-8 py-4 items-center">
                 <h6>Applied Filters:</h6>
                 <ul className="flex ml-4">
                   {[...new Array(4)].map((_, idx) => (
@@ -132,9 +132,9 @@ export default function Product() {
                   <div className="mb-4">
                     <h4 className="mb-3">Price</h4>
                     <input mix="100" min="10" type="range" />
-                    <div className="flex w-full space-between">
+                    <div className="flex w-2/4 place-content-between">
                       <Button type="primary">Apply</Button>
-                      <Button type="secondary">Reset</Button>
+                      <Button type="tertiary">Reset</Button>
                     </div>
                   </div>
                 </aside>
@@ -153,8 +153,16 @@ export default function Product() {
                   ))}
                 </Row>
               </Column>
+              <Column classes="w-full p-4 flex items-center justify-center">
+                <Button type="primary">Show More Product</Button>
+              </Column>
+              <Column classes="w-9/12">
+                <Pagination />
+              </Column>
+              <Column classes="w-3/12 flex justify-end items-center">
+                <span className="pr-2">Product</span> <Chip size="sm">500</Chip>
+              </Column>
             </Row>
-            <Pagination />
           </Container>
         </section>
       </main>

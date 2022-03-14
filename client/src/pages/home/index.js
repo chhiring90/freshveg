@@ -1,14 +1,14 @@
-import Header from "../components/header/index";
-import Banner from "../components/banner/index";
-import { Container, Row, Column } from "../components/layout/index";
-import { BlogTwo, Profile, BlogOne, Veggie } from "../assets/images";
-import Sidebar from "../components/sidebar/index";
-import Card from "../components/card/index";
-import Button from "../components/button/index";
-import Testimonial from "../components/testimonial/index";
-import Footer from "../components/footer/index";
+import Header from "../../components/header/index";
+import Banner from "../../components/banner/index";
+import { Container, Row, Column } from "../../components/layout/index";
+import { BlogTwo, Profile, BlogOne, Veggie } from "../../assets/images";
+import Sidebar from "../../components/sidebar/index";
+import Card from "../../components/card/index";
+import Button from "../../components/button/index";
+import Testimonial from "../../components/testimonial/index";
+import Footer from "../../components/footer/index";
 
-import { srcToAlt } from "../helper/index";
+import { srcToAlt } from "../../helper/index";
 
 const categories = [
   { label: "Bakery" },

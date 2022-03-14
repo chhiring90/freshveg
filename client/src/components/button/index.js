@@ -16,6 +16,9 @@ export default function Button({ type, children, clicked }) {
         "border-slate-400 bg-slate-400 text-white hover:bg-transparent hover:text-slate-400"
       );
       break;
+    case "tertiary":
+      classes.push("border-slate-300 hover:text-slate--300");
+      break;
     default:
       break;
   }
